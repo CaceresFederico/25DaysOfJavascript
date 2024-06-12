@@ -32,3 +32,8 @@ const values = Object.values(person)
 // Object.entries(obj) To get the keys and values in an array
 const entries = Object.entries(person)
 // console.log(entries)
+// Checking if a specific key o property exist in an object.
+console.log(person.hasOwnProperty('firstName')) 
+// true
+console.log(person.hasOwnProperty('Name'))
+// false
