@@ -133,15 +133,46 @@ function newModifyObj() {
 // console.log(newModifyObj(users));
 
 // 5- Get all keys or properties of users object
-function getKeys (){
-  let keys = Object.keys(users)
-  return keys
+function getKeys() {
+  let keys = Object.keys(users);
+  return keys;
 }
 // console.log(getKeys(users))
 
 // 6 -Get all the values of users object
-function getValues (){
-  let values = Object.values(users)
-  return values
+function getValues() {
+  let values = Object.values(users);
+  return values;
 }
-console.log(getValues(users))
+// console.log(getValues(users))
+
+// 7- Use the countries object to print a country name, capital, populations and languages.
+const countries = {
+  Argentina: {
+    capital: "Buenos Aires",
+    population: 45808747,
+    languages: ["Español"],
+  },
+  Paraguay: {
+    capital: "Asunción",
+    population: 7353000,
+    languages: ["Guaraní", "Español"],
+  },
+  Rusia: {
+    capital: "Moscú",
+    population: 143470000,
+    languages: ["Ruso"],
+  },
+};
+
+function printCountryInfo() {
+  for (country in countries) {
+    if (countries.hasOwnProperty(country)) {
+      console.log(`Country: ${country}`);
+      console.log(`Capital: ${countries[country].capital}`);
+      console.log(`Population: ${countries[country].population}`);
+      console.log(`Languages: ${countries[country].languages.join(", ")}\n`);
+    }
+  }
+}
+// console.log(printCountryInfo(countries))

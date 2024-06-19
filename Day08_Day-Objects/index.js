@@ -19,6 +19,8 @@ const person = {
 // Adding some new property to obj
 person.height = 175
 
+const newObj = Object.create(person)
+
 // MANIPULATE OBJECTS METHODS
 // Object.assign({},obj) To copy object without modifying the original obj
 const copyPerson = Object.assign({},person);
@@ -33,7 +35,7 @@ const values = Object.values(person)
 const entries = Object.entries(person)
 // console.log(entries)
 // Checking if a specific key o property exist in an object.
-console.log(person.hasOwnProperty('firstName')) 
+console.log(person.hasOwnProperty('height')) 
 // true
 console.log(person.hasOwnProperty('Name'))
 // false
